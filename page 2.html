@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tentang Kami - Inaklug</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tentang Kami - Inaklug</title>
+    <html lang="id">
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>Tentang Kami - Inaklug</title>
+            <style>
+                
+                * {
+                    margin: 0;
+                    padding: 0;
+                    box-sizing: border-box;
+                    font-family: system-ui, -apple-system, sans-serif;
+                }
+        
+                nav {
+                    background: linear-gradient(90deg, #46074E 0%, #197BD0 80%);
+                    padding: 1rem 2rem;
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    height: 70px;
+                    position: sticky; /* Membuat navbar tetap di atas */
+                        top: 0; /* Posisi dari atas layar */
+                        z-index: 1000; /* Supaya navbar selalu di atas elemen lain */
+                }
+                
+        
+                .logo {
+                    color: white;
+                    font-size: 2rem;
+                    text-decoration: none;
+                    font-weight: 300;
+                    border-bottom: 2px solid white;
+                    padding-bottom: 2px;
+                }
+                .nav-links {
+                    display: flex;
+                    align-items: center;
+                    gap: 2.5rem;
+                }
+        
+                .nav-links a {
+                    color: white;
+                    text-decoration: none;
+                    font-size: 0.95rem;
+                }
+        
+                .search-container {
+                    display: flex;
+                    align-items: center;
+                    background: rgba(255, 255, 255, 0.1);
+                    border-radius: 20px;
+                    padding: 0.5rem 1rem;
+                    margin-left: 1rem;
+                }
+        
+                .search-icon {
+                    width: 20px;
+                    height: 20px;
+                    color: white;
+                    margin-right: 0.5rem;
+                }
+        
+                .search-input {
+                    background: transparent;
+                    border: none;
+                    color: white;
+                    width: 200px;
+                    outline: none;
+                    font-size: 0.9rem;
+                }
+        
+                .search-input::placeholder {
+                    color: rgba(255, 255, 255, 0.7);
+                }
+        
+                .daftar-btn {
+                    padding: 8px 20px;
+                    background-color: #195395;
+                    border: none;
+                    border-radius: 19px;
+                    color: white;
+                    font-size: 13px;
+                    cursor: pointer;
+                    font-weight: 500;
+                    margin-left: 15px;
+                }
+        
+                .hero {
+                    background: linear-gradient(rgba(74, 22, 105, 0.9), rgba(30, 60, 114, 0.9)), url('/api/placeholder/1920/400');
+                    height: 300px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    color: white;
+                }
+        
+                .hero h1 {
+                    font-size: 2.5rem;
+                }
+        
+                .container {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    gap: 10px;
+                    padding: 20px;
+                }
+                .submit-button {
+                    background-color: white;
+                    color: #3b82f6;
+                    border: 2px solid #3b82f6;
+                    border-radius: 25px;
+                    padding: 10px 30px;
+                    font-size: 16px;
+                    cursor: pointer;
+                    min-width: 200px;
+                }
+        
+                .profile-section {
+                    margin-left: 9rem; /* Memberikan jarak dari sisi kiri */
+                    margin-right: auto; /* Memastikan elemen tetap di kiri */
+                    margin-bottom: 0.8rem; /* Jarak bawah */
+                    font-size: 18px; /* Mengecilkan ukuran teks */
+                    max-width: 800px; /* Membatasi lebar maksimum agar rapi */
+                    text-align: left; /* Teks tetap rata kiri */
+                    padding: 1rem; /* Tambahkan padding agar konten lebih nyaman */
+                    background-color: #ffffff; /* Opsional: Warna latar untuk kontras */
+                }
+
+                .profile-section h2 {
+                    font-size: 1.5rem; /* Ukuran teks judul */
+                    margin-bottom: 1rem; /* Jarak bawah judul */
+                    color: #555;
+                }
+
+                .profile-section p {
+                    font-size: 0.9rem; /* Ukuran teks deskripsi lebih kecil */
+                    color: #555; /* Warna teks */
+                    line-height: 1.6; /* Spasi antar baris */
+                }
+
+                .vision-mission {
+                    display: grid; /* Mengaktifkan grid layout */
+                    grid-template-columns: repeat(2, 1fr); /* Dua kolom dengan ukuran yang sama */
+                    gap: 0.7rem; /* Jarak antar item grid */
+                    margin-left: 9rem; /* Memberikan jarak dari sisi kiri */
+                    margin-right: 2rem; /* Memberikan jarak kanan */
+                    margin-bottom: 2rem; /* Jarak bawah */
+                    padding: 0; /* Menghilangkan padding kiri dan kanan agar grid lebih ke kiri */
+                    max-width: 1200px; /* Membatasi lebar maksimum agar responsif */
+                }
+
+                .vm-card {
+                    display: flex; /* Mengaktifkan flexbox */
+                    flex-direction: column; /* Menyusun gambar dan teks dalam kolom */
+                    align-items: flex-start; /* Menyelaraskan gambar dan teks di kiri */
+                    font-size: 16px; /* Ukuran teks */
+                    text-align: left; /* Teks rata kiri */
+                    padding: 1rem; /* Padding dalam card */
+                    background-color: #ffffff; /* Warna latar belakang card */
+                    border-radius: 10px; /* Membulatkan sudut card */
+                }
+
+                .vm-card h2 {
+                    margin-bottom: 1.5rem; /* Jarak bawah judul */
+                    color: #333; /* Warna teks judul */
+                    font-size: 18px; /* Ukuran teks judul */
+                }
+
+                .vm-card img {
+                    width: 100%; /* Gambar tetap mengisi lebar container */
+                    max-width: 420px; /* Maksimal lebar gambar */
+                    height: auto; /* Menjaga rasio aspek gambar */
+                    margin-bottom: 1.5rem; /* Jarak bawah gambar */
+                    border-radius: 8px; /* Membulatkan sudut gambar */
+                    object-fit: cover; /* Memastikan gambar tetap proporsional */
+                }
+
+                .vm-card p {
+                    color: #4a5568; /* Warna teks deskripsi */
+                    font-size: 0.9rem;
+                    line-height: 1.6; /* Spasi antar baris */
+                    text-align: justify; /* Justifikasi teks */
+                }
+                .divider {
+                    border: 0;
+                    height: 1px;
+                    background: #EAEAEA; /* Warna putih dengan transparansi */
+                    width: 150%;
+                    position: relative;
+                    margin: 20px auto; /* Memberikan jarak di atas dan bawah garis */
+                    left: 50%; /* Menggeser garis ke kanan */
+                    transform: translateX(-50%);
+                }
+                        
+                .contact-section {
+                    background: #ffffff;
+                    padding: 4rem 2rem;
+                    text-align: center;
+                }
+                .contact-section h1 {
+                    font-size: 20px !important; 
+                    font-family: 'Poppins', sans-serif !important;
+                    color: #333 !important;
+                    text-align: center !important;
+                    margin-bottom: 30px !important;
+                }
+                .contact-section h2 {
+                    font-size: 18px !important; 
+                    font-family: 'Poppins', sans-serif !important;
+                    color: #4A4A4A !important;
+                    text-align: center !important;
+                    margin-bottom: 28px !important;
+                }
+        
+                .contact-section h3 {
+                    margin-bottom: 1.5rem;
+                    color: #4a5568;
+                }
+        
+                .contact-section p {
+                    font-size: 15px !important; 
+                    margin-bottom: 1rem;
+                    color: #4a5568;
+
+                }
+        
+                .buttons {
+                    display: inline-block;
+                    padding: 0.8rem 2rem;
+                    border-radius: 25px;
+                    text-decoration: none;
+                    margin: 1rem;
+                    font-weight: 500;
+                }
+        
+                .location-btn {
+    background: linear-gradient(90deg, #4A235A, #3498db)!important;
+    color: white;
+    border-radius: 19px; /* Membuat sudut melengkung */
+    padding: 0.5rem 1rem; /* Jarak di dalam tombol */
+    text-decoration: none; /* Menghapus garis bawah teks */
+}
+
+.message-btn {
+    border: 2px solid #1e3c72;
+    color: #1e3c72;
+    border-radius: 19px; /* Membuat sudut melengkung */
+    padding: 0.5rem 1rem; /* Jarak di dalam tombol */
+    text-decoration: none; /* Menghapus garis bawah teks */
+}
+        
+.footer {
+    background: linear-gradient(to right, #4A235A, #3498db); /* Warna gradasi */
+    color: white; /* Warna teks putih */
+    text-align: center; /* Teks rata tengah */
+    padding: 21px; /* Padding dalam footer */
+    position: relative; /* Posisi relatif agar mengikuti tata letak dokumen */
+    bottom: 0; /* Tetap di bawah */
+    width: 1004%; /* Lebar penuh halaman */
+    margin-top: 200px; /* Geser footer ke bawah */
+}
+
+            .hero {
+    background: url('images/banner-tentang-kami.jpg') no-repeat center center/cover;
+    height: 400px; /* Tinggi banner */
+    position: relative; /* Untuk membuat elemen anak bisa diatur posisinya */
+    display: flex;
+    justify-content: flex-start; /* Letakkan teks di sisi kiri */
+    align-items: flex-end; /* Letakkan teks di bawah */
+    padding: 1rem; /* Tambahkan padding untuk jarak dari tepi */
+    color: white;
+    text-align: left; /* Teks rata kiri */
+}
+
+.hero::before {
+    content: ''; /* Diperlukan agar pseudo-element muncul */
+    position: absolute; /* Agar overlay menutupi seluruh .hero */
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background:linear-gradient(
+                to right,
+                rgba(60, 13, 107, 0.7) 18%,     /* Mulai dari kiri lebih pekat */
+                rgba(102, 51, 153, 0.3) 35%,    /* Mulai memudar */
+                rgba(102, 51, 153, 0.1) 100%    /* Hampir transparan di kanan */
+            );
+    z-index: 1; /* Letakkan overlay di atas background tapi di bawah konten */
+}
+
+.hero * {
+    position: relative; /* Pastikan konten berada di atas overlay */
+    z-index: 2;
+}
+
+
+.hero h1 {
+    font-size: 1.8rem; /* Ukuran teks */
+    margin: 0; /* Hilangkan margin default */
+    position: relative; /* Supaya tetap di dalam parent */
+     /* Opsional: Tambahkan latar belakang semi transparan */
+    padding: 0.5rem 1rem; /* Tambahkan padding agar teks lebih menonjol */
+    border-radius: 5px; /* Membuat sudut membulat */
+}
+
+            </style>
+</head>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+    <nav>
+        <a href="#" class="logo">klug</a>
+        <div class="nav-links">
+            <a href="test uas.html">Home</a>
+            <a href="#">Tentang Kami</a>
+            <a href="#">Layanan Kami</a>
+            <a href="#">Artikel</a>
+            <a href="page 3.html">Hubungi Kami</a>
+            <div class="search-container">
+                <svg class="search-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                </svg>
+                <input type="text" class="search-input" placeholder="Ketik pencarian">
+            </div>
+            <a href="#" class="daftar-btn">DAFTAR ON-LINE</a>
+        </div>
+    </nav>
+
+    <div class="hero">
+        <h1>TENTANG KAMI</h1>    
+    </div>
+
+    <div class="container">
+        <div class="profile-section">
+            <h2>PROFIL</h2>
+            <p>Didirikan pada tahun 2018, Ini membuktikan bahwa INAKLUG merupakan konsultan pendidikan internasional yang berpengalaman, terbesar, terpercaya dan juga memiliki jam terbang tinggi untuk melayani para anak-anak muda Indonesia untuk menuntut ilmu di berbagai negara maju dunia.</p>
+        </div>
+
+        <div class="vision-mission">
+            <div class="vm-card">
+                <h2>VISI</h2>
+                <img src="images//visi.png" alt="Vision Illustration">
+                <p>Membangun Sumber Daya Indonesia yang mempunyai daya saing tinggi, tangguh secara internasional untuk menghadapi persaingan di era globalisasi serta membangun karakter pemimpin Indonesia masa depan yang tangguh, mandiri, dan profesional</p>
+            </div>
+            <div class="vm-card">
+                <h2>MISI</h2>
+                <img src="images/misi.png" alt="Mission Illustration">
+                <p>Memfasilitasi siswa Indonesia untuk mengenyam pendidikan di berbagai perguruan tinggi di lebih dari 25 negara maju di dunia dengan layanan yang profesional<br><br>
+                Memberikan bantuan konsultasi terhadap siswa/i Indonesia dalam mempersiapkan studinya dari berbagai aspek, baik aspek sosial, budaya, maupun pendidikan</p>
+            </div>
+            <div class="container">
+                <div class="g-recaptcha" data-sitekey="your-site-key"></div>
+                <button class="submit-button">LAYANAN KAMI</button>
+            </div>
+    </div>
+
+</head>
+<body>
+    <section class="services">
+        <hr class="divider"> <!-- Garis samar -->
+    <div class="contact-section">
+        <h1>HUBUNGI KAMI</h1>
+        <h2>KANTOR PUSAT</h2>
+        <p class="address">Gedung Ir. H. M. Suseno - Jl. R.P Soeroso No.6, Menteng, Jakarta Pusat</p>
+        <p class="phone">Phone : (+62 21) 398 38706 - Fax: (+62 21) 316 1701</p>
+        <p class="hotline">Hotline: +6281519040071 / +6281199816767</p>
+        
+        <div class="buttons">
+            <a href="#" class="location-btn">LOKASI KAMI</a>
+            <a href="#" class="message-btn">KIRIM PESAN</a>
+        </div>
+    </div>
+    </section>
+    <footer class="footer">
+        <p>Copyright © 2020 - Inaklug Indonesia | Hak cipta dilindungi undang-undang</p>
+    </footer>
+</section>
+</div>
+</section>
+</div>
